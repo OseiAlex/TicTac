@@ -5,9 +5,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TicTacToe {
-    static Scanner in;
-    static String[] board;
-    static String turn;
+    private static Scanner in;
+    private static String[] board;
+    private static String turn;
 
     public static void main(String[] args) {
         in = new Scanner(System.in);
@@ -44,7 +44,6 @@ public class TicTacToe {
                 winner = checkWinner();
             } else {
                 System.out.println("Slot already taken; re-enter slot number:");
-                continue;
             }
         }
         if (winner.equalsIgnoreCase("draw")) {
@@ -54,7 +53,7 @@ public class TicTacToe {
         }
     }
 
-    static String checkWinner() {
+    private static String checkWinner() {
         for (int a = 0; a < 8; a++) {
             String line = null;
             switch (a) {
@@ -101,7 +100,7 @@ public class TicTacToe {
         return null;
     }
 
-    static void printBoard() {
+    private static void printBoard() {
         System.out.println("/---|---|---\\");
         System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
         System.out.println("|-----------|");
@@ -111,9 +110,11 @@ public class TicTacToe {
         System.out.println("/---|---|---\\");
     }
 
-    static void populateEmptyBoard() {
+    private static void populateEmptyBoard() {
         for (int a = 0; a < 9; a++) {
             board[a] = String.valueOf(a+1);
         }
     }
 }
+
+///Alex
