@@ -5,12 +5,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TicTacToe {
-    private static Scanner in;
     private static String[] board;
     private static String turn;
 
     public static void main(String[] args) {
-        in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         board = new String[9];
         turn = "X";
         String winner = null;
